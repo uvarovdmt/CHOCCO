@@ -1,0 +1,55 @@
+.btn {
+    font-size: rem(19px);
+    font-weight: bold;
+    padding: rem(21px) rem(35px);
+    text-transform: uppercase;
+    border-radius: rem(100px);
+    line-height: 1;
+    text-decoration: none;
+    display: inline-block;
+    border: none;
+
+    &--theme--white {
+        background: #fff;
+        color: $darkGreen;
+
+        &:hover {
+            color: #fff;
+            background: $darkGreen;
+            transition: 0.2s;
+        }
+    }
+
+    &--theme--green {
+        background: $darkGreen;
+        color: #fff;
+
+        &:hover {
+            color: $darkGreen;
+            background: #fff;
+            transition: 0.2s;
+        }
+
+        &:focus {
+            outline: none;
+        }
+        
+    }
+
+    &--theme--transparent {
+        background: transparent;
+        color: #000;
+        font-weight: normal;
+        text-transform: none;
+
+        &:hover {
+            color: $darkGreen;
+            transition: 0.2s;
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+}
+
