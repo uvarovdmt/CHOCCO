@@ -15,10 +15,11 @@
     fill: #fff;
     width: rem(57px);
     height: rem(57px);
+    flex-shrink: 0;
 }
 
 .menu {
-    margin: 0 30px;
+    margin: 17px 30px 0;
 
     @include tablets {
         display: none;
@@ -34,7 +35,6 @@
 
 .menu__item {
     margin-right: rem(26px);
-    margin-top: 5px;
 
     &:last-child {
         margin-right: 0;
@@ -51,6 +51,7 @@
     text-decoration: none;
     display: flex;
     align-items: center;
+    margin: 14px 0 0;
 }
 
 .phone-number__icon {

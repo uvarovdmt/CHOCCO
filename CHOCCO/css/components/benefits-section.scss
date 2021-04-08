@@ -2,10 +2,23 @@
     position: relative;
     background: url("../img/decor/benefits_side-leaf.png") left top 57% no-repeat;
 
+    @include tablets {
+        position: relative;
+    background: url("../img/decor/benefits_side-leaf.png") left top 10% no-repeat;
+    }
+
+    @include phones {
+        background: none;
+    }
+
     &:before {
         content: url("../img/decor/benefits_bar-barries.png");
         position: absolute;
         bottom: rem(-135px);
         left: 0;
+
+        @include phones {
+            display: none;
+        }
     }
 }

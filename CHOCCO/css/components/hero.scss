@@ -44,8 +44,11 @@
         text-align: center;
 
         &:before {
-            content: url("../img/decor/tablets_hero-comp.png");
-            margin-bottom: 15px;
+            content: "";
+            width: rem(316px);
+            height: rem(330px);
+            background: url("../img/decor/tablets_hero-comp.png") center center / contain no-repeat;
+            margin-bottom: rem(15px);
         }
     }
 }
@@ -84,5 +87,9 @@
 
     @include tablets {
         padding: 0 22%;
+    }
+
+    @include phones {
+        padding: 0 16%;
     }
 }

@@ -6,6 +6,10 @@
         position: absolute;
         bottom: 5%;
         left: 5%;
+
+        @include tablets {
+            display: none;
+        }
     }
 
     &:after {
@@ -13,5 +17,9 @@
         position: absolute;
         bottom: 3%;
         right: 1%;
+
+        @include tablets {
+            display: none;
+        }
     }
 }
