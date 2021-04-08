@@ -54,6 +54,15 @@
     margin: 14px 0 0;
 }
 
+.phone-number--theme--green {
+    color: $darkGreen;
+
+    @include phones {
+        justify-content: center;
+        margin: 0 0 10px;
+    }
+}
+
 .phone-number__icon {
     flex-shrink: 0;
 }
@@ -63,6 +72,10 @@
     height: rem(12px);
     margin-right: rem(6px);
     fill: #fff;
+}
+
+.phone-number__icon-elem--theme--green {
+    fill: $darkGreen;
 }
 
 .phone-number__text {
