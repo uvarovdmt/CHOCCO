@@ -352,6 +352,7 @@ img {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  position: relative;
 }
 .section--font-color--green {
   color: #0b4d3c;
@@ -644,12 +645,14 @@ img {
 .reviews-section:before {
   content: url("../img/decor/reviews_side-leaf.png");
   position: absolute;
+  z-index: 1;
   bottom: -9.1111111111rem;
   left: 0;
 }
 .reviews-section:after {
   content: url("../img/decor/reviews_berries.png");
   position: absolute;
+  z-index: 1;
   bottom: -4.8333333333rem;
   left: 0;
 }
@@ -660,7 +663,7 @@ img {
 .order-section:before {
   content: url("../img/decor/order_berry.png");
   position: absolute;
-  bottom: 5%;
+  bottom: 10%;
   left: 5%;
 }
 @media screen and (max-width: 768px) {
@@ -671,7 +674,7 @@ img {
 .order-section:after {
   content: url("../img/decor/order_leaf.png");
   position: absolute;
-  bottom: 3%;
+  bottom: 5%;
   right: 1%;
 }
 @media screen and (max-width: 768px) {

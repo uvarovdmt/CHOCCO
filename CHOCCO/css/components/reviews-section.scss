@@ -5,6 +5,7 @@
     &:before {
         content: url("../img/decor/reviews_side-leaf.png");
         position: absolute;
+        z-index: 1;
         bottom: rem(-164px);
         left: 0;
     }
@@ -12,6 +13,7 @@
     &:after {
         content: url("../img/decor/reviews_berries.png");
         position: absolute;
+        z-index: 1;
         bottom: rem(-87px);
         left: 0;
     }

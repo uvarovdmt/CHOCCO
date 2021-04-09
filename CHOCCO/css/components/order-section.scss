@@ -4,7 +4,7 @@
     &:before {
         content: url("../img/decor/order_berry.png");
         position: absolute;
-        bottom: 5%;
+        bottom: 10%;
         left: 5%;
 
         @include tablets {
@@ -15,7 +15,7 @@
     &:after {
         content: url("../img/decor/order_leaf.png");
         position: absolute;
-        bottom: 3%;
+        bottom: 5%;
         right: 1%;
 
         @include tablets {
