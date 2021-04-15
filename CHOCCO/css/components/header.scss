@@ -21,8 +21,29 @@
 .menu {
     margin: 17px 30px 0;
 
+
     @include tablets {
         display: none;
+    }
+
+    &--vertical {
+        @include tablets {
+            display: block;
+        }
+
+        font-size: rem(36px);
+        color: #fff;
+        text-align: center;
+
+        .menu__list {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .menu__item {
+            margin-right: 0;
+
+        }
     }
 }
 
@@ -44,6 +65,10 @@
 .menu__link {
     text-decoration: none;
     white-space: nowrap;
+
+    &:hover {
+        text-decoration: underline;
+      }
 }
 
 .phone-number {

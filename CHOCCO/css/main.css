@@ -80,6 +80,7 @@ footer {
 
 a {
   color: inherit;
+  text-decoration: none;
 }
 
 img {
@@ -212,6 +213,23 @@ img {
     display: none;
   }
 }
+.menu--vertical {
+  font-size: 2rem;
+  color: #fff;
+  text-align: center;
+}
+@media screen and (max-width: 768px) {
+  .menu--vertical {
+    display: block;
+  }
+}
+.menu--vertical .menu__list {
+  display: flex;
+  flex-direction: column;
+}
+.menu--vertical .menu__item {
+  margin-right: 0;
+}
 
 .menu__list {
   display: flex;
@@ -230,6 +248,9 @@ img {
 .menu__link {
   text-decoration: none;
   white-space: nowrap;
+}
+.menu__link:hover {
+  text-decoration: underline;
 }
 
 .phone-number {
@@ -504,6 +525,7 @@ img {
 }
 .benefits-section:before {
   content: url("../img/decor/benefits_bar-barries.png");
+  z-index: 1;
   position: absolute;
   bottom: -7.5rem;
   left: 0;
@@ -815,6 +837,7 @@ img {
 
 .fixed-menu {
   position: fixed;
+  text-decoration: none;
   top: 20%;
   right: 3%;
   z-index: 100;
@@ -938,4 +961,306 @@ img {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.fullscreen-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  flex-direction: column;
+  background: #2e3336;
+  z-index: 1000;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: none;
+}
+.fullscreen-menu.active {
+  display: flex;
+}
+
+.fullscreen-menu__close {
+  display: block;
+  position: absolute;
+  top: 1.3888888889rem;
+  right: 1.3888888889rem;
+}
+
+.fullscreen-menu__close-icon {
+  width: 1rem;
+  height: 1rem;
+  fill: #c2c2c3;
+}
+
+.ingredients {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.ingredients__button {
+  width: 5rem;
+  height: 5rem;
+  background: #86c3d7;
+  border-radius: 0.2777777778rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  color: #fff;
+}
+
+.ingredients__button-icon {
+  margin-bottom: 0.3333333333rem;
+}
+
+.ingredients__button-icon-elem {
+  fill: currentColor;
+  width: 2.8333333333rem;
+  height: 2.8333333333rem;
+  display: block;
+}
+
+.ingredients__button-text {
+  line-height: 1;
+}
+
+.ingredients:hover .ingredients__button {
+  background: #60aacc;
+}
+.ingredients:hover .ingredients__dropdown {
+  left: 100%;
+  opacity: 1;
+}
+
+.ingredients__dropdown {
+  color: #2f3234;
+  position: absolute;
+  left: -555.5rem;
+  top: 0;
+  width: 15rem;
+  background: rgba(255, 255, 255, 0.93);
+  border-radius: 0.2777777778rem;
+  padding: 1.4444444444rem 0.6666666667rem 1.4444444444rem 1.9444444444rem;
+  transition: opacity 0.3s;
+  opacity: 0;
+}
+.ingredients__dropdown:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 50%;
+  width: 1.6666666667rem;
+  left: -1.6111111111rem;
+}
+
+.ingredients__table {
+  width: 100%;
+}
+
+.ingredients__icon {
+  width: 1.9444444444rem;
+  height: 1.9444444444rem;
+}
+
+.ingredients__table-row {
+  border-bottom: 0.2777777778rem solid transparent;
+}
+.ingredients__table-row:last-child {
+  border-bottom: 0;
+}
+
+.ingredients__text-container {
+  padding-left: 0.5555555556rem;
+}
+
+.ingredients__table-cell {
+  vertical-align: middle;
+}
+
+.ingredients__text {
+  font-size: 0.8888888889rem;
+  font-weight: bold;
+}
+
+.products-section {
+  background: #f8faf9;
+}
+
+.product__container {
+  display: flex;
+}
+@media screen and (max-width: 768px) {
+  .product__container {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.product__ingredients {
+  margin-bottom: 1.1111111111rem;
+}
+@media screen and (max-width: 768px) {
+  .product__ingredients {
+    display: none;
+  }
+}
+
+.product__col {
+  width: 50%;
+  margin-right: 1%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (max-width: 768px) {
+  .product__col {
+    width: 80%;
+    margin-right: 0;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 3.3333333333rem;
+    text-align: center;
+  }
+  .product__col:last-child {
+    margin-bottom: 0;
+  }
+}
+.product__col:last-child {
+  margin-right: 0;
+}
+
+.product__image {
+  position: relative;
+}
+@media screen and (max-width: 768px) {
+  .product__image {
+    height: 16.6666666667rem;
+  }
+}
+.product__image:before, .product__image:after {
+  display: block;
+  position: absolute;
+}
+.product__image:before {
+  content: url("../img/decor/products-leaf-blur.png");
+  width: 4.1666666667rem;
+  height: 5.1111111111rem;
+  top: 21%;
+  left: 8%;
+}
+.product__image:after {
+  content: url("../img/decor/products-leaf.png");
+  width: 5.5rem;
+  height: 4.0555555556rem;
+  right: 9%;
+  bottom: 3%;
+}
+
+.product__image-elem {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+}
+
+.product__title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 1.3888888889rem;
+  color: #0d0d0d;
+  text-transform: uppercase;
+}
+@media screen and (max-width: 768px) {
+  .product__title {
+    padding: 0 10%;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__title {
+    padding: 0;
+    font-size: 1.6666666667rem;
+  }
+}
+
+.product__text {
+  margin-bottom: 1.2777777778rem;
+  padding: 0 21% 0 0;
+}
+@media screen and (max-width: 768px) {
+  .product__text {
+    padding: 0;
+  }
+}
+@media screen and (max-width: 480px) {
+  .product__text {
+    padding: 0;
+  }
+}
+
+.product__values-rub-sign {
+  height: 1.6666666667rem;
+  width: 1.1111111111rem;
+  margin-left: 0.5rem;
+  margin-top: 0.7222222222rem;
+}
+
+.product__values-row {
+  margin-bottom: 0.6666666667rem;
+}
+.product__values-row:last-child {
+  margin-bottom: 0;
+}
+
+.product__values-block:first-child {
+  padding-right: 1.6666666667rem;
+}
+
+.product__values-amount {
+  font-weight: bold;
+  color: #333333;
+}
+
+.product__values-rub {
+  color: #0d0d0d;
+  font-size: 3.3333333333rem;
+  display: flex;
+  align-items: center;
+}
+
+.products-slider {
+  position: relative;
+  height: 100%;
+}
+.products-slider .bx-wrapper {
+  border: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.product-slider__arrow {
+  background: url("../img/logo/arrow.svg") center center no-repeat;
+  background-size: contain;
+  display: block;
+  width: 0.7222222222rem;
+  height: 1.5555555556rem;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+}
+.product-slider__arrow--direction--next {
+  right: 0;
+}
+.product-slider__arrow--direction--prev {
+  left: 0;
+  transform: rotate(-180deg);
+}
+
+.products-slider__icon {
+  width: 0.7777777778rem;
+  height: 1.4444444444rem;
+  display: block;
+  fill: black;
 }

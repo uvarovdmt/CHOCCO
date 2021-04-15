@@ -13,6 +13,7 @@
 
     &:before {
         content: url("../img/decor/benefits_bar-barries.png");
+        z-index: 1;
         position: absolute;
         bottom: rem(-135px);
         left: 0;
