@@ -1,0 +1,20 @@
+.team-section {
+    position: relative;
+
+    &:before {
+        content: url("../img/decor/acc-leaf.png");
+        position: absolute;
+        z-index: 1;
+        top: -150px;
+        right: 0;
+    }
+
+    &:after {
+        content: url("../img/decor/acc-berry.png");
+        position: absolute;
+        z-index: 1;
+        top: -30px;
+        right: 10px;
+    }
+}
+
